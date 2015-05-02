@@ -1,0 +1,29 @@
+! urxvt true transparency
+URxvt*.depth: 32
+URxvt*.background: [90]#000000
+URxvt*.tintColor: black
+URxvt*.foreground: red
+
+! urxvt perl extensions
+URxvt*.perl-ext-common: default,matcher,tabbed
+
+! urxvt clickable URLs
+URxvt*.url-launcher: chromium
+URxvt*.matcher.button: 1
+
+! urxvt scrollbar [remove]
+URxvt*.scrollBar: false
+
+! urxvt fullscreen
+URxvt*.keysym.F11: perl:fullscreen:switch
+
+! urxvt change font-size on the fly
+URxvt*.keysym.C-Up: perl:font-size:increase
+URxvt*.keysym.C-Down: perl:font-size:decrease
+URxvt*.keysym.C-S-Up: perl:font-size:incglobal
+URxvt*.keysym.C-S-Down: perl:font-size:decglobal
+
+! urxvt disable some default bindings for font-size to work
+URxvt*.iso14755: false
+URxvt*.iso14755_52: false
+
