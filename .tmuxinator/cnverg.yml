@@ -1,0 +1,36 @@
+# ~/.tmuxinator/cnverg.yml
+
+name: cnverg
+root: ~/code/cnverg/app
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window: nvm use system
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t cnverg
+
+windows:
+  - local:
+      layout: a298,212x54,0,0{106x54,0,0[106x27,0,0,0,106x26,0,28,2],105x54,107,0,1}
+      panes:
+        - grunt dev
+        - npm run start-dev
+        - 

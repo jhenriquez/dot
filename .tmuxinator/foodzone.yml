@@ -1,0 +1,11 @@
+# ~/.tmuxinator/foodzone.yml
+
+name: foodzone
+root: ~/code/happyfriends/foodzone
+
+windows:
+  - code:
+      layout: main-vertical
+      panes:
+        - 
+        - 
